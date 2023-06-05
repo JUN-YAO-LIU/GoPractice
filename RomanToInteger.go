@@ -9,12 +9,31 @@ import (
 
 // 程式執行入口
 func main() {
-	fmt.Println(romanToInt("Jim"))
+	fmt.Println(romanToInt("III"))
 }
 
 
 func romanToInt(s string) int {
-    var result int
-    // m := make(map[string]string)
-    return 1+result
+	var v, lv, cv int
+	h := map[uint8]int{
+		'I': 1,
+		'V': 5,
+		'X': 10,
+		'L': 50,
+		'C': 100,
+		'D': 500,
+		'M': 1000,
+	}
+
+    for i := len(s) - 1; i >= 0; i-- {
+		cv = h[s[i]]
+		if cv < lv {
+			v -= cv
+		} else {
+			v += cv
+		}
+		lv = cv
+	}
+
+	return v
 }
