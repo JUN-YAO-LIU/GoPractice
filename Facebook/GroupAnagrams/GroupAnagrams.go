@@ -31,7 +31,6 @@ func test(strs []string) []string {
 
 
 func main(){
-
 	// myStrings := []string{"cat", "tac", "dog", "god", "act"}
 	// fmt.Println(test(myStrings))
 
