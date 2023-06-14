@@ -23,6 +23,11 @@ func main(){
 	// fmt.Println(strArr)
 
 	fmt.Println(string(a))
+
+
+	// 換成取一位會變成uint8
+	fmt.Println("秀出string，單字")
+	fmt.Println(s[0])
 	
 	// for _, v := range a {
     // 	fmt.Println(v)

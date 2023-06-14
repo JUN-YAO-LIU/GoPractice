@@ -33,4 +33,14 @@ func main() {
 
 	m2 := make([][]string,7)
 	fmt.Println(m2)
+
+	h := map[uint8]int{
+		'I': 1,
+		'V': 5,
+		'X': 10,
+		'L': 50,
+		'C': 100,
+		'D': 500,
+		'M': 1000,
+	}
   }
