@@ -32,4 +32,9 @@ func main(){
 	// for _, v := range a {
     // 	fmt.Println(v)
 	// }
+
+	fmt.Println("-----Cut-----")
+	sCut := "abaasdf123c"
+	sCut = sCut[1:len(sCut)-1]
+	fmt.Println(sCut)
 }
