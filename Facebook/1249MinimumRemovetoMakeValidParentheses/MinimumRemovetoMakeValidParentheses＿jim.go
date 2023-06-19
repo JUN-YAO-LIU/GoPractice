@@ -1,3 +1,5 @@
+// Note : 刪除最小數量的 patentheses然後回傳字串
+
 package main
 
 import (
@@ -11,7 +13,6 @@ func minRemoveToMakeValid(s string) string {
 	var left,right []int
 	result := s
 
-
 	for key,val := range s{
 		if string(val) == "("{
 			left = append(left,key)
@@ -22,24 +23,17 @@ func minRemoveToMakeValid(s string) string {
 		}
 	}
 
-
-	if len(left) == 0 && len(right) == 0{
-		return result
-	}
-
-	if len(left) > 0 && len(right) == 0{
-		return result
-	}
-
-	if len(left) == 0 && len(right) > 0{
-		return result
+	for key,val := range left{
+		if right[key] < val{
+			char := []rune(s)
+    		result = delChar(char, val)
+		}
 	}
 
     fmt.Println(left)
 	fmt.Println(right)
 
 	// 消除一個沒配對到的，如果都有就不用remove
-	
 	if len(left) != len(right){
 		var remove int
 		if len(left) > len(right){
@@ -58,16 +52,10 @@ func minRemoveToMakeValid(s string) string {
 		result = string(res)
 	}
 
-	
 
 	// fmt.Println("----------")
 	// fmt.Println(left)
 	// fmt.Println(right)
-	
-	// 判斷有沒有pair，方向有沒有對
-	if left[len(left)-1] > right[len(right)-1]{
-		result = ""
-	}
 	
 
 	return result

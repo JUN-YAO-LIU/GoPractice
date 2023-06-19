@@ -1,3 +1,8 @@
+// Note : 要做到 type.function，這個type就要是struct
+// func (this *sturct) Dosomething() (int){
+//
+//}
+
 package main
 
 import (
