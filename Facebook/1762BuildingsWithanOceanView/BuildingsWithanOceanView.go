@@ -8,35 +8,30 @@ import (
 func findBuildings(heights []int) []int {
 	var result []int
 
-	// result = append(result, 10)
-
-	if len(heights) == 1{
-		result = append(result, 0)
-		return result
-	}
-
 	for i := 0 ; len(heights) - 1 >= i ; i++ {
+		add := true
 		for a := i ; len(heights) - 1 >= a ; a++ {
-			if heights[a] > heights[i] {
+			if heights[a] >= heights[i] && a != i {
+				add = false
 				break
 			}
-			
-			if heights[a] < heights[i] && len(heights) - 1 == a{
-				result = append(result, i)
-			}
 		} 
+
+		if add {
+			result = append(result, i)
+		}
 	}
 
     return result
 }
 
 func main(){
-	var arr = []int{4,2,3,1}
+	var arr = []int{4,3,2,1}
 	fmt.Println(findBuildings(arr))
 
 	// var arr1 = []int{1}
 	// fmt.Println(findBuildings(arr1))
 
-	var arr2 = []int{1,3}
+	var arr2 = []int{2,2,2,2}
 	fmt.Println(findBuildings(arr2))
 }

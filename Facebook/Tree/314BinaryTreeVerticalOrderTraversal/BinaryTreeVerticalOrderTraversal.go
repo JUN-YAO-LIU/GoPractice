@@ -11,6 +11,7 @@ import(
 //     Right *TreeNode
 // }
 
+// DFS
 func verticalOrder(root *TreeNode) [][]int {
    if root == nil {
        return [][]int{}
@@ -50,6 +51,7 @@ func verticalOrder(root *TreeNode) [][]int {
    return columns
 }
 
+// BFS
 func getWidth(node *TreeNode, left *int, right *int, width int) {
    if node == nil {
        return
