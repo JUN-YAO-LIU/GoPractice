@@ -39,6 +39,3 @@ func main(){
 	arr1 := []string{"tan", "nat", "bac", "abc"}
 	fmt.Println(groupAnagrams(arr1))
 }
-
-
-
