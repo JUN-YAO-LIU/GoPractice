@@ -39,4 +39,10 @@ func main(){
 
 	// 也可以這樣
 	fmt.Println("arr :",[][]int{layer2,layer})
+
+	// 起始要踩穩
+	fmt.Println("切割陣列",layer[1:2])
+
+	// 0 ~ 1，不突破終點
+	fmt.Println("切割陣列",layer[:2])
 }

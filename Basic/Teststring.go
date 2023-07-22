@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sort"
+	"strings"
 )
 
 func main(){
@@ -37,4 +38,14 @@ func main(){
 	sCut := "abaasdf123c"
 	sCut = sCut[1:len(sCut)-1]
 	fmt.Println(sCut)
+
+	// 包含strings 包含可以用
+	fmt.Println("包含：",strings.ContainsAny(sCut,"0"))
+
+	// 兩個變數，交換值
+	swap1 := "swap1"
+	swap2 := "swap2"
+
+	swap1 , swap2 = swap2, swap1
+	fmt.Println("swap1 :",swap1,"swap2 :",swap2)
 }

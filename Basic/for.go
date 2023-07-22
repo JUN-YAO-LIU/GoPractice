@@ -9,7 +9,7 @@ func main() {
    for i, v := range pow {
       fmt.Printf("2**%d = %d\n", i, v)
    }
-
+   11111 11111 11111 11111 11111 11111
     map1 := make(map[int]float32)
     map1[1] = 7.0
     map1[2] = 8.0

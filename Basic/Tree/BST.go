@@ -94,6 +94,7 @@ func main() {
     Insert(root, 70)
     Insert(root, 60)
     Insert(root, 80)
+    Insert(root, 89)
 
     fmt.Println("二叉搜索树中序遍历结果：")
     InOrder(root)
